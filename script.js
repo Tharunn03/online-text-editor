@@ -1,37 +1,48 @@
 // option menu
 const size = document.getElementById("textsize");
 const font = document.getElementById("fonts");
-const theme = document.getElementById("themes")
+const theme = document.getElementById("themes");
+
+const labl = document.getElementsByClassName("choice");
 
 // editor content box
 const textbox = document.getElementById("textbx");
 
-// event listener
-size.addEventListener("change", () =>
-{
-  if (theme == dark)
-  {
-    // background
+// Apply font size + font family live
+function applyTextStyles() {
+  textbox.style.fontSize = size.value;
+  textbox.style.fontFamily = font.value;
+}
+
+// Apply theme live
+function applyTheme() {
+  if (theme.value === "dark") {
+    // CSS variables
     document.documentElement.style.setProperty("--bgcolor", "#0a0a0a");
-
-    // textbox
-    textbox.documentElement.style.setProperty("--bgcolor", "#1f1f1f")
-    textbox.documentElement.style.setProperty("--textcolor", "rgb(250, 235, 215)");
-
-    // dropdownboxes
-    font.documentElement.style.setProperty("--bg-color", "#1f1f1f");
-    font.documentElement.style.setProperty("--text-color", "rgb(250, 235, 215)");
-    font.documentElement.style.setProperty("--hovercolor", "#525252")
-    
-    size.documentElement.style.setProperty("--bgcolor", "#1f1f1f");
-    size.documentElement.style.setProperty("--textcolor", "rgb(250, 235, 215)");
-    
-    theme.documentElement.style.setProperty("--bgcolor", "#1f1f1f");
-    theme.documentElement.style.setProperty("--textcolor", "rgb(250, 235, 215)");
+    document.documentElement.style.setProperty("--textcolor", "rgb(250, 235, 215)");
+    document.documentElement.style.setProperty("--innerbgcolor", "#1f1f1f");
+    document.documentElement.style.setProperty("--hovercolor", "#525252");
   }
-  const selectedsize = size.value;
-  const changedfont = font.value;
-  textbox.style.fontFamily = changedfont;
-  textbox.style.fontSize = selectedsize;
-})
 
+  if (theme.value === "light") {
+    document.documentElement.style.setProperty("--bgcolor", "#e6e6e6");
+    document.documentElement.style.setProperty("--textcolor", "#1a1a1a");
+    document.documentElement.style.setProperty("--innerbgcolor", "#ffffff");
+    document.documentElement.style.setProperty("--hovercolor", "#d3d3d3");
+  }
+
+  // Update all dropdown boxes
+  for (let el of labl) {
+    el.style.backgroundColor = "var(--innerbgcolor)";
+    el.style.color = "var(--textcolor)";
+  }
+}
+
+// Event listeners
+size.addEventListener("change", applyTextStyles);
+font.addEventListener("change", applyTextStyles);
+theme.addEventListener("change", applyTheme);
+
+// Initialize on page load
+applyTextStyles();
+applyTheme();

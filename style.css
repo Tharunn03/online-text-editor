@@ -12,6 +12,7 @@ body
 {
   color: var(--textcolor);
   background-color: var(--bgcolor);
+  transition: background 1s ease, color 1s ease;
 }
 
 /* option menu */
@@ -25,6 +26,7 @@ body
 /* dropdown boxes */
 .choice
 {
+  text-align: center;
   border-radius: 5%;
   color: var(--textcolor);
   border: none;
@@ -42,19 +44,6 @@ body
 {
     border: none;
     outline: none;
-}
-/* dropdown boxes indivitual control */
-#fonts
-{
-  text-align: center;
-}
-#textsize
-{
-  text-align: center;
-}
-#themes
-{
-  text-align: center;
 }
 
 /* textbox */
