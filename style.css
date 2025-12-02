@@ -1,0 +1,76 @@
+/* default variables */
+:root {
+  --bgcolor: #0a0a0a;
+  --textcolor: rgb(250, 235, 215);
+  --innerbgcolor: #1f1f1f;
+  --hovercolor: #525252;
+}
+
+
+/* background body */
+body
+{
+  color: var(--textcolor);
+  background-color: var(--bgcolor);
+}
+
+/* option menu */
+.options
+{
+  padding-bottom: 10px;
+  font-family: 'Comic Sans MS';
+  font-size: 20px;
+}
+
+/* dropdown boxes */
+.choice
+{
+  border-radius: 5%;
+  color: var(--textcolor);
+  border: none;
+  font-family: 'Comic Sans MS';
+  background-color: var(--innerbgcolor);
+  height: auto;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+.choice:hover
+{
+  background-color: var(--hovercolor);
+}
+.choice:focus
+{
+    border: none;
+    outline: none;
+}
+/* dropdown boxes indivitual control */
+#fonts
+{
+  text-align: center;
+}
+#textsize
+{
+  text-align: center;
+}
+#themes
+{
+  text-align: center;
+}
+
+/* textbox */
+#textbx
+{
+  border-radius: 1%;
+  border: none;
+  resize: none;
+  background-color: var(--innerbgcolor);
+  color: var(--textcolor);
+  font-size: 16px;
+  height: 80vh;
+  width: 99%;
+}
+#textbx:focus
+{
+  border: none;
+  outline: none;
+}
