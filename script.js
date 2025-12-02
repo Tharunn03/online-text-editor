@@ -16,7 +16,7 @@ function applyTextStyles() {
 
 // Apply theme live
 function applyTheme() {
-  if (theme.value === "dark") {
+  if (theme.value === "midnight") {
     // CSS variables
     document.documentElement.style.setProperty("--bgcolor", "#0a0a0a");
     document.documentElement.style.setProperty("--textcolor", "rgb(250, 235, 215)");
@@ -24,7 +24,7 @@ function applyTheme() {
     document.documentElement.style.setProperty("--hovercolor", "#525252");
   }
 
-  if (theme.value === "light") {
+  if (theme.value === "day") {
     document.documentElement.style.setProperty("--bgcolor", "#e6e6e6");
     document.documentElement.style.setProperty("--textcolor", "#1a1a1a");
     document.documentElement.style.setProperty("--innerbgcolor", "#ffffff");
@@ -36,6 +36,27 @@ function applyTheme() {
     document.documentElement.style.setProperty("--textcolor", "#370617");
     document.documentElement.style.setProperty("--innerbgcolor", "#ffba08");
     document.documentElement.style.setProperty("--hovercolor", "#dc2f02");
+  }
+
+  if (theme.value === "lavender") {
+    document.documentElement.style.setProperty("--bgcolor", "#c19ee0");
+    document.documentElement.style.setProperty("--textcolor", "#6247aa");
+    document.documentElement.style.setProperty("--innerbgcolor", "#dec9e9");
+    document.documentElement.style.setProperty("--hovercolor", "#d2b7e5");
+  }
+
+  if (theme.value === "purplehaze") {
+    document.documentElement.style.setProperty("--bgcolor", "#310055");
+    document.documentElement.style.setProperty("--textcolor", "#dc97ff");
+    document.documentElement.style.setProperty("--innerbgcolor", "#3c0663");
+    document.documentElement.style.setProperty("--hovercolor", "#8b2fc9");
+  }
+
+  if (theme.value === "cherry") {
+    document.documentElement.style.setProperty("--bgcolor", "#800f2f");
+    document.documentElement.style.setProperty("--textcolor", "#ffccd5");
+    document.documentElement.style.setProperty("--innerbgcolor", "#a4133c");
+    document.documentElement.style.setProperty("--hovercolor", "#ff4d6d");
   }
 
   // Update all dropdown boxes
