@@ -52,11 +52,32 @@ function applyTheme() {
     document.documentElement.style.setProperty("--hovercolor", "#8b2fc9");
   }
 
-  if (theme.value === "cherry") {
+  if (theme.value === "bubblegum") {
     document.documentElement.style.setProperty("--bgcolor", "#800f2f");
     document.documentElement.style.setProperty("--textcolor", "#ffccd5");
     document.documentElement.style.setProperty("--innerbgcolor", "#a4133c");
     document.documentElement.style.setProperty("--hovercolor", "#ff4d6d");
+  }
+
+  if (theme.value === "spring") {
+    document.documentElement.style.setProperty("--bgcolor", "#55a630");
+    document.documentElement.style.setProperty("--textcolor", "#eeef20");
+    document.documentElement.style.setProperty("--innerbgcolor", "#80b918");
+    document.documentElement.style.setProperty("--hovercolor", "#bfd200");
+  }
+
+  if (theme.value === "gardenb") {
+    document.documentElement.style.setProperty("--bgcolor", "#90a955");
+    document.documentElement.style.setProperty("--textcolor", "#132a13");
+    document.documentElement.style.setProperty("--innerbgcolor", "#ecf39e");
+    document.documentElement.style.setProperty("--hovercolor", "#90a955");
+  }
+
+  if (theme.value === "gardenn") {
+    document.documentElement.style.setProperty("--bgcolor", "#132a13");
+    document.documentElement.style.setProperty("--textcolor", "#ecf39e");
+    document.documentElement.style.setProperty("--innerbgcolor", "#31572c");
+    document.documentElement.style.setProperty("--hovercolor", "#90a955");
   }
 
   // Update all dropdown boxes
