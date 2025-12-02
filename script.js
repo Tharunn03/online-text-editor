@@ -31,6 +31,13 @@ function applyTheme() {
     document.documentElement.style.setProperty("--hovercolor", "#d3d3d3");
   }
 
+  if (theme.value === "sunset") {
+    document.documentElement.style.setProperty("--bgcolor", "#faa307");
+    document.documentElement.style.setProperty("--textcolor", "#370617");
+    document.documentElement.style.setProperty("--innerbgcolor", "#ffba08");
+    document.documentElement.style.setProperty("--hovercolor", "#dc2f02");
+  }
+
   // Update all dropdown boxes
   for (let el of labl) {
     el.style.backgroundColor = "var(--innerbgcolor)";
